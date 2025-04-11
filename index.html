@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>I'm Bored</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #fff;
+      margin: 0;
+    }
+    button {
+      padding: 20px 40px;
+      font-size: 24px;
+      background-color: red;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="sendWhatsApp()">I'm bored</button>
+
+  <script>
+    function sendWhatsApp() {
+      const phone = '9779804946048';
+      const message = encodeURIComponent("let's grab a coffee");
+      window.location.href = `https://wa.me/${phone}?text=${message}`;
+    }
+  </script>
+</body>
+</html>
